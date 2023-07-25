@@ -1,0 +1,11 @@
+https://github.com/vasusen-code/Telethon/archive/refs/tags/v1.24.0.zip
+cryptg
+tgcrypto
+pyrogram==2.0.106
+python-dotenv
+telethon
+aiofiles
+aiohttp
+opencv-python-headless
+yt_dlp
+requests

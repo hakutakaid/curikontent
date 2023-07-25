@@ -1,0 +1,22 @@
+import glob
+from pathlib import Path
+from B.utils import load_module
+import logging
+from . import bot
+
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.WARNING)
+
+path = "B/module/*.py"
+files = glob.glob(path)
+for name in files:
+    with open(name) as a:
+        patt = Path(a.name)
+        plugin_name = patt.stem
+        load_module(plugin_name.replace(".py", ""))
+
+#Don't be a thief 
+print("Successfully deployed!")
+
+if __name__ == "__main__":
+    bot.run_until_disconnected()
